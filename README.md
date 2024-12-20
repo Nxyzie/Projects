@@ -1,5 +1,4 @@
-# Projects
-This repository contains my projects
+
 <h2 align="left">Hi 👋! My name is  Nikki Magdali and I'm currently a student. This repository hosts all of my open-source projects.</h2>
 
 ###
