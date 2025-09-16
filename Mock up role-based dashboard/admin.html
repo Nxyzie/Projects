@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2>Admin Panel</h2>
+        <p>System Administrator</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="#" class="active" onclick="showSection('dashboard')">Dashboard</a></li>
+        <li><a href="#" onclick="showSection('users')"> User Management</a></li>
+        <li><a href="#" onclick="showSection('sales')"> Sales Reports</a></li>
+        <li><a href="#" onclick="showSection('finance')"> Financial Overview</a></li>
+        <li><a href="#" onclick="showSection('inventory')"> Inventory</a></li>
+        <li><a href="#" onclick="showSection('settings')"> System Settings</a></li>
+      </ul>
+      <button class="logout-btn" onclick="window.location.href='index.html'"> Logout</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Dashboard Section -->
+      <div id="dashboard" class="content-section">
+        <div class="main-header">
+          <h1>Admin Dashboard</h1>
+          <p>Welcome back! Here's what's happening today.</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card">
+            <div class="card-header"><div class="card-icon"></div><h3>Total Users</h3></div>
+            <div class="card-value">847</div>
+            <div class="card-subtitle">+12% from last month</div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-icon"></div><h3>Revenue</h3></div>
+            <div class="card-value">Php 23,450</div>
+            <div class="card-subtitle">+8.2% from last week</div>
+          </div>
+          <div class="card">
+            <div class="card-header"><div class="card-icon"></div><h3>Orders</h3></div>
+            <div class="card-value">1,247</div>
+            <div class="card-subtitle">+15.3% from yesterday</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Management -->
+      <div id="users" class="content-section hidden">
+        <div class="main-header">
+          <h1> User Management</h1>
+          <p>Manage system users, roles, and access.</p>
+        </div>
+        <div class="card">
+          <h3>Registered Users</h3>
+          <table border="1" cellpadding="10" style="width:100%; border-collapse:collapse;">
+            <tr><th>Name</th><th>Role</th><th>Status</th></tr>
+            <tr><td>Angel Grace Villanueva</td><td>Cashier</td><td>Active</td></tr>
+            <tr><td>Zor John Ylosorio</td><td>Employee</td><td>Inactive</td></tr>
+            <tr><td>Rose Kathleen Paril</td><td>Admin</td><td>Active</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- Sales Reports -->
+      <div id="sales" class="content-section hidden">
+        <div class="main-header">
+          <h1> Sales Reports</h1>
+          <p>Overview of daily and monthly sales.</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><h3>Today’s Sales</h3><p>Php 2,350</p></div>
+          <div class="card"><h3>This Week</h3><p>Php 14,780</p></div>
+          <div class="card"><h3>This Month</h3><p>Php 60,210</p></div>
+        </div>
+      </div>
+
+      <!-- Financial Overview -->
+      <div id="finance" class="content-section hidden">
+        <div class="main-header">
+          <h1> Financial Overview</h1>
+          <p>Track income and expenses.</p>
+        </div>
+        <div class="cards-grid">
+          <div class="card"><h3>Total Income</h3><p>Php 120,000</p></div>
+          <div class="card"><h3>Total Expenses</h3><p>Php 85,000</p></div>
+          <div class="card"><h3>Net Profit</h3><p>Php 35,000</p></div>
+        </div>
+      </div>
+
+      <!-- Inventory -->
+      <div id="inventory" class="content-section hidden">
+        <div class="main-header">
+          <h1> Inventory</h1>
+          <p>Track product stock levels.</p>
+        </div>
+        <div class="card">
+          <h3>Low Stock Alerts</h3>
+          <ul>
+            <li>Burger Buns – 12 left</li>
+            <li>Cheese – 5 packs</li>
+            <li>Soda – 8 bottles</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- System Settings -->
+      <div id="settings" class="content-section hidden">
+        <div class="main-header">
+          <h1> System Settings</h1>
+          <p>Configure system preferences.</p>
+        </div>
+        <div class="card">
+          <h3>Preferences</h3>
+          <ul>
+            <li>Change Password</li>
+            <li>Enable/Disable Notifications</li>
+            <li>Database Backup</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      // hide all sections
+      document.querySelectorAll('.content-section').forEach(sec => sec.classList.add('hidden'));
+
+      // remove active class from all sidebar links
+      document.querySelectorAll('.sidebar-menu a').forEach(link => link.classList.remove('active'));
+
+      // show the selected section
+      document.getElementById(sectionId).classList.remove('hidden');
+
+      // highlight active menu
+      event.target.classList.add('active');
+    }
+  </script>
+</body>
+</html>

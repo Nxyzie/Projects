@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="styles.css">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h2> Employee</h2>
+        <p>Staff Portal</p>
+      </div>
+      <ul class="sidebar-menu">
+        <li><a href="#" class="active"> My Dashboard</a></li>
+        <li><a href="#"> Time Tracking</a></li>
+        <li><a href="#"> Schedule</a></li>
+        <li><a href="#"> Tasks</a></li>
+        <li><a href="#"> Performance</a></li>
+        <li><a href="#"> Messages</a></li>
+      </ul>
+      <button class="logout-btn" onclick="window.location.href='index.html'"> Logout</button>
+    </div>
+
+    <div class="main-content">
+      <div class="main-header">
+        <h1>Employee Dashboard</h1>
+        <p>Welcome! Here's your daily overview.</p>
+      </div>
+      <!-- Paste your employee dashboard cards/content here -->
+       <div class="cards-grid">
+
+  <!-- Time Tracking -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon">⏱</div>
+      <h3>Time Tracking</h3>
+    </div>
+    <p><strong>Clock In:</strong> 9:02 AM</p>
+    <p><strong>Clock Out:</strong> 5:15 PM</p>
+    <p><strong>Total Hours Today:</strong> 8h 13m</p>
+    <button class="logout-btn">View Timesheet</button>
+  </div>
+
+  <!-- Schedule -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon"></div>
+      <h3>Schedule</h3>
+    </div>
+    <ul>
+      <li><strong>09:30 AM</strong> - Team Standup</li>
+      <li><strong>11:00 AM</strong> - Project Review</li>
+      <li><strong>02:00 PM</strong> - Client Call</li>
+      <li><strong>04:00 PM</strong> - Code Review</li>
+    </ul>
+    <button class="logout-btn">View Full Schedule</button>
+  </div>
+
+  <!-- Tasks -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon"></div>
+      <h3>Tasks</h3>
+    </div>
+    <ul>
+      <li> Submit weekly report</li>
+      <li> Finish UI updates</li>
+      <li> Fix API bug</li>
+    </ul>
+    <button class="logout-btn">View All Tasks</button>
+  </div>
+
+  <!-- Performance -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon"></div>
+      <h3>Performance</h3>
+    </div>
+    <p><strong>Monthly Goal Progress:</strong> 75%</p>
+    <progress value="75" max="100"></progress>
+    <p><strong>Last Feedback:</strong> "Great teamwork on the last sprint!"</p>
+    <button class="logout-btn">View Report</button>
+  </div>
+
+  <!-- Messages -->
+  <div class="card">
+    <div class="card-header">
+      <div class="card-icon"></div>
+      <h3>Messages</h3>
+    </div>
+    <ul>
+      <li><strong>HR:</strong> Don’t forget to update your training log.</li>
+      <li><strong>Manager:</strong> Please review the new sprint backlog.</li>
+      <li><strong>Colleague:</strong> Can you help debug the login issue?</li>
+    </ul>
+    <button class="logout-btn">Go to Inbox</button>
+  </div>
+
+</div>
+
+
+    </div>
+  </div>
+</body>
+</html>
